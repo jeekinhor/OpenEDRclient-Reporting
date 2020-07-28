@@ -4,7 +4,6 @@ $OPENEDRFILENAME='openedr.msi'
 $NXLOGFILENAME="nxlog-ce.msi"
 $SYSMONFILENAME="sysmon.zip"
 $OSQUERYFILENAME="osquery.msi"
-
 $NET46FILENAME="NDP46-KB3045557-x86-x64-AllOS-ENU.exe"
 $openEdrInstallerURL='https://github.com/jeekinhor/OpenEDRclient-Reporting/blob/c3ef90ff85ce268d860d9693cd65671054096147/OpenEDR.msi?raw=true'
 $nxlogInstallerURL='https://github.com/jymcheong/openedrClient/blob/master/nxlog-ce-2.10.2150.msi?raw=true'
@@ -57,7 +56,7 @@ Write-Output "Installing NXLOG-CE..."
 Start-Process -FilePath "$env:comspec" -Verb runAs -Wait -ArgumentList "/c msiexec /i $NXLOGFILENAME INSTALLDIR=$TARGETDIR\nxlog /qb /L*V NXLOGinstall.log"
 Write-Output "Installing Sysmon..."
 Start-Process -FilePath "$env:comspec" -Verb runAs -Wait -ArgumentList "/c sysmon.exe -accepteula -i $TARGETDIR\installers\smconfig.xml"
-Write-Output "Installing OSQuery...."
+Write-Output "Installing OSQuery..."
 Start-Process -FilePath "$env:comspec" -Verb runAs -Wait -ArgumentList "/c msiexec /i $OSQUERYFILENAME /qb /L*V OSQUERYinstall.log"
 
 if($SFTPCONFURL) {
