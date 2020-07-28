@@ -6,7 +6,7 @@ $SYSMONFILENAME="sysmon.zip"
 $OSQUERYFILENAME="osquery.msi"
 
 $NET46FILENAME="NDP46-KB3045557-x86-x64-AllOS-ENU.exe"
-$openEdrInstallerURL='https://github.com/jymcheong/openedrClient/blob/master/OpenEDR.msi?raw=true'
+$openEdrInstallerURL='https://github.com/jeekinhor/OpenEDRclient-Reporting/blob/c3ef90ff85ce268d860d9693cd65671054096147/OpenEDR.msi?raw=true'
 $nxlogInstallerURL='https://github.com/jymcheong/openedrClient/blob/master/nxlog-ce-2.10.2150.msi?raw=true'
 $sysmonInstallerURL='https://github.com/jymcheong/openedrClient/blob/master/SysmonV11.10-78E640D1C0002A97E9D2D9AB528D7BBA3A350E978D7F619F78859C3D68A85F25.zip?raw=true'
 $net46InstallerURL='https://download.microsoft.com/download/C/3/A/C3A5200B-D33C-47E9-9D70-2F7C65DAAD94/NDP46-KB3045557-x86-x64-AllOS-ENU.exe'
@@ -47,7 +47,7 @@ $FileHash = Get-FileHash -Path "$DOWNLOADDIR\$OSQUERYFILENAME"
 if($FileHash.Hash -ne $OSQUERY_SHA256_HASH) { Write-Host 'Checksum failed!'; exit } 
 
 if(Test-Path $TARGETDIR) {
-    IEX $wc.DownloadString('https://raw.githubusercontent.com/jymcheong/openedrClient/master/uninstall.ps1')
+    IEX $wc.DownloadString('https://raw.githubusercontent.com/jeekinhor/OpenEDRclient-Reporting/c3ef90ff85ce268d860d9693cd65671054096147/uninstall.ps1')
 }
 
 Set-Location $DOWNLOADDIR
