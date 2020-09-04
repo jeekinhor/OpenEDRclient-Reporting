@@ -5,7 +5,7 @@ $NXLOGFILENAME="nxlog-ce.msi"
 $SYSMONFILENAME="sysmon.zip"
 $OSQUERYFILENAME="osquery.msi"
 $NET46FILENAME="NDP46-KB3045557-x86-x64-AllOS-ENU.exe"
-$openEdrInstallerURL='https://github.com/jeekinhor/OpenEDRclient-Reporting/blob/c3ef90ff85ce268d860d9693cd65671054096147/OpenEDR.msi?raw=true'
+$openEdrInstallerURL='https://github.com/jeekinhor/OpenEDRclient-Reporting/blob/master/OpenEDR.msi?raw=true'
 $nxlogInstallerURL='https://github.com/jymcheong/openedrClient/blob/master/nxlog-ce-2.10.2150.msi?raw=true'
 $sysmonInstallerURL='https://download.sysinternals.com/files/Sysmon.zip'
 $net46InstallerURL='https://download.microsoft.com/download/C/3/A/C3A5200B-D33C-47E9-9D70-2F7C65DAAD94/NDP46-KB3045557-x86-x64-AllOS-ENU.exe'
@@ -13,7 +13,7 @@ $osqueryInstallerURL='https://pkg.osquery.io/windows/osquery-4.1.2.msi'
 
 # System.Net.WebClient will fail to download if remote site has TLS1.2
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$OPENEDR_SHA256_HASH='6EE494385006C9BF92152F2EB75B4ACC5C2A74397C481436B97CEBDAD69CD7DB'
+$OPENEDR_SHA256_HASH='47CE03D6FFF5550E5666C72CC7D47EEE2FB4C68D91D06AA806BB17A69CCB6BFC'
 $NXLOG_SHA256_HASH='DCDDD2297C4FAD9FDEAA36276D58317A7EA1EFCD6851F89215A7231CDA6BA266'
 $SYSMON_SHA256_HASH='8D78706B5ED7B7EC2C80BB388E3D361BA2D4B0461CBBD0C787CF523D4CFBFD81'
 $NET46_SHA256_HASH='B21D33135E67E3486B154B11F7961D8E1CFD7A603267FB60FEBB4A6FEAB5CF87'
